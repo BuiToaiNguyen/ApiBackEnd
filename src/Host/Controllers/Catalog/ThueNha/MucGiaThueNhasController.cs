@@ -16,6 +16,8 @@ public class MucGiaThueNhasController : VersionedApiController
 
 
     [HttpGet("{id:guid}")]
+
+
     [AllowAnonymous]
     [TenantIdHeader]
     //[MustHavePermission(FSHAction.View, FSHResource.Brands)]

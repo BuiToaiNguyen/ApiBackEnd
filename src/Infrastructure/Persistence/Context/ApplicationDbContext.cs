@@ -149,6 +149,11 @@ public class ApplicationDbContext : BaseDbContext
 
 
     public DbSet<SeaGame> SeaGames => Set<SeaGame>();
+    public DbSet<Book> Books => Set<Book>();
+    public DbSet<CategoryBook> CategoryBooks => Set<CategoryBook>();
+
+    public DbSet<AuthorBook> AuthorBooks => Set<AuthorBook>();
+
 
     #region ThueNha
     public DbSet<DienTichNha> DienTichNhas => Set<DienTichNha>();

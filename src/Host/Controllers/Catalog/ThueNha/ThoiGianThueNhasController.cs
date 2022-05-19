@@ -8,7 +8,7 @@ public class ThoiGianThueNhasController : VersionedApiController
     [AllowAnonymous]
     [TenantIdHeader]
     //[MustHavePermission(FSHAction.Search, FSHResource.Brands)]
-    [OpenApiOperation("Danh mục hàng hóa.", "")]
+    [OpenApiOperation("Danh mục thời gian thuê nhà.", "")]
     public Task<PaginationResponse<ThoiGianThueNhaDto>> SearchAsync(SearchThoiGianThueNhasRequest request)
     {
         return Mediator.Send(request);

@@ -2,6 +2,8 @@ namespace TD.CitizenAPI.Application.Catalog.MucGiaThueNhas;
 
 public class SearchMucGiaThueNhasRequest : PaginationFilter, IRequest<PaginationResponse<MucGiaThueNhaDto>>
 {
+
+
 }
 
 public class MucGiaThueNhasBySearchRequestSpec : EntitiesByPaginationFilterSpec<MucGiaThueNha, MucGiaThueNhaDto>

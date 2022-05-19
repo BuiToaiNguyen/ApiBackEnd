@@ -979,3 +979,25 @@ public class ThueNhaConfig : IEntityTypeConfiguration<ThueNha>
 
 
 #endregion ThueNha
+
+
+#region Book
+
+public class BookConfig : IEntityTypeConfiguration<Book>
+{
+    public void Configure(EntityTypeBuilder<Book> builder)
+    {
+        builder.IsMultiTenant();
+        builder.Property(b => b.NameBook).HasMaxLength(256);
+        builder.Property(b => b.CodeBook).HasMaxLength(256);
+        builder.Property(b => b.Description).HasMaxLength(1024);
+
+        builder.HasOne(s => s.AuthorBook).WithMany(g => g.Books).HasForeignKey(s => s.AuthorId).OnDelete(DeleteBehavior.Cascade); 
+        builder.HasOne(s => s.CategoryBook).WithMany(g => g.Books).HasForeignKey(s => s.CategoryId).OnDelete(DeleteBehavior.Cascade); 
+
+
+    }
+}
+
+
+#endregion Book

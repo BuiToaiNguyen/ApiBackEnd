@@ -100,7 +100,6 @@ public class Product : AuditableEntity, IAggregateRoot
         if (rate.HasValue && Rate != rate) Rate = rate.Value;
         if (brandId.HasValue && brandId.Value != Guid.Empty && !BrandId.Equals(brandId.Value)) BrandId = brandId.Value;
         if (imagePath is not null && ImagePath?.Equals(imagePath) is not true) ImagePath = imagePath;
-
         if (userName is not null && UserName?.Equals(userName) is not true) UserName = userName;
         if (companyId.HasValue && companyId.Value != Guid.Empty && !CompanyId.Equals(companyId.Value)) CompanyId = companyId.Value;
         if (type.HasValue && Type != type) Type = type.Value;
