@@ -132,6 +132,7 @@ public class GetProductRequestHandler : IRequestHandler<GetProductRequest, Resul
             attributes.Add(new AttributeValueInProductResponse { Code = itemAttribute.Code, Value = item.Value, Attribute = mapped });
         }
 
+
         foreach (var item in product.AttributeTexts)
         {
             var itemAttribute = await _repositoryAttribute.GetBySpecAsync(new AttributeByIdSpec((DefaultIdType)item.AttributeId), cancellationToken);

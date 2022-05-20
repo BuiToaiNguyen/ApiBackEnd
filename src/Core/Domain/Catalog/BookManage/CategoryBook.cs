@@ -9,10 +9,6 @@ public class CategoryBook : AuditableEntity, IAggregateRoot
 
     public virtual ICollection<Book>? Books { get; set; }
 
-
-
-
-
     public CategoryBook(string nameCate, string? code, string? description, string? image)
     {
         NameCate = nameCate;

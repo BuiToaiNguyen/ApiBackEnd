@@ -3,7 +3,7 @@
 public class UpdateCategoryBookRequest : IRequest<Result<Guid>>
 {
     public Guid Id { get; set; }
-    public string Name { get; set; } = default!;
+    public string NameCate { get; set; } = default!;
     public string? Code { get; set; }
 
     public string? Description { get; set; }
@@ -14,7 +14,7 @@ public class UpdateCategoryBookRequest : IRequest<Result<Guid>>
 public class UpdateCategoryBookRequestValidator : CustomValidator<UpdateCategoryBookRequest>
 {
     public UpdateCategoryBookRequestValidator(IRepository<CategoryBook> repository, IStringLocalizer<UpdateCategoryBookRequestValidator> localizer) =>
-        RuleFor(p => p.Name)
+        RuleFor(p => p.NameCate)
             .NotEmpty();
 }
 
@@ -33,7 +33,7 @@ public class UpdateCategoryBookRequestHandler : IRequestHandler<UpdateCategoryBo
 
         _ = item ?? throw new NotFoundException(string.Format(_localizer["CategoryBook.notfound"], request.Id));
 
-        item.Update(request.Name, request.Code, request.Description,request.Image);
+        item.Update(request.NameCate, request.Code, request.Description,request.Image);
 
         await _repository.UpdateAsync(item, cancellationToken);
 

@@ -12,4 +12,9 @@ public class BookDto : IDto
     public Guid? CategoryId { get; set; }
     public DateTime? CreatedOn { get; set; }
 
+
+
+
+
+
 }

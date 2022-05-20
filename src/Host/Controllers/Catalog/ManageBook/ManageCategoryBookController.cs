@@ -2,7 +2,7 @@
 
 namespace TD.CitizenAPI.Host.Controllers.Catalog;
 
-public class CategoryBookController : VersionedApiController
+public class ManageCategoryBookController : VersionedApiController
 {
     [HttpPost("search")]
     [AllowAnonymous]

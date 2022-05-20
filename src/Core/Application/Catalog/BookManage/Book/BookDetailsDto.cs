@@ -11,7 +11,10 @@ public class BookDetailsDto : IDto
     public Guid? AuthorId { get; set; }
     public Guid? CategoryId { get; set; }
     public DateTime? CreatedOn { get; set; }
-    public virtual CategoryBookDto? oneCategoryBook { get; set; }
+    public virtual AuthorBook? AuthorBook { get; set; }
+    public virtual CategoryBook? CategoryBook { get; set; }
+
+
 
 
 

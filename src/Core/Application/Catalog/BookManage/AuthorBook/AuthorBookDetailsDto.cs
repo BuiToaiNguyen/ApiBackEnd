@@ -1,6 +1,6 @@
 ﻿namespace TD.CitizenAPI.Application.Catalog.BookManage;
 
-public class AuthorBookDto : IDto
+public class AuthorBookDetailsDto : IDto
 {
     public Guid Id { get; set; }
     public string NameAuthor { get; set; } = default!;
